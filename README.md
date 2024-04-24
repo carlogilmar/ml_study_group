@@ -11,14 +11,13 @@
 ![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/c60be561-1ae5-4d6e-8168-34babab087f2)
 ![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/bc4f80f4-5fb5-495e-ba23-713fc73d19e9)
 
-
-Insights:
-1. **Machine Learning** refers to the computer's ability to learn without being programmed.
-2. There are types of ML: **supervised and unsupervised learning, recommender systems, and reinforcement learning.**
-3. **Supervised Learning** are algorithms that learning from X inputs to generate Y outputs.
+** 💡 Insights:**
+- **Machine Learning** refers to the computer's ability to learn without being programmed.
+- There are types of ML: **supervised and unsupervised learning, recommender systems, and reinforcement learning.**
+- **Supervised Learning** are algorithms that learning from X inputs to generate Y outputs.
   - There are two types of Supervised Learning algorithms: **regression and classification.**
   - **Regression** algorithms are for predict a number, there are infinite possible outputs.
   - **Classification** algorithms are for predicts categories.
-4. **Unsupervised Learning** works with data that is not associated to an specific output.
-  - This algorithms try to find structure in the data.
-  - Clustering is one kind of this algortihms.
+- **Unsupervised Learning** works with data that is not associated to an specific output.
+ - This algorithms try to find structure in the data.
+ - Clustering is one kind of this algortihms.
