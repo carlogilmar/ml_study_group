@@ -16,7 +16,9 @@ Insights:
 1. **Machine Learning** refers to the computer's ability to learn without being programmed.
 2. There are types of ML: **supervised and unsupervised learning, recommender systems, and reinforcement learning.**
 3. **Supervised Learning** are algorithms that learning from X inputs to generate Y outputs.
-4. There are two types of Supervised Learning algorithms: **regression and classification.**
-5. **Regression** algorithms are for predict a number, there are infinite possible outputs.
-6. **Classification** algorithms are for predicts categories.
-
+  - There are two types of Supervised Learning algorithms: **regression and classification.**
+  - **Regression** algorithms are for predict a number, there are infinite possible outputs.
+  - **Classification** algorithms are for predicts categories.
+4. **Unsupervised Learning** works with data that is not associated to an specific output.
+  - This algorithms try to find structure in the data.
+  - Clustering is one kind of this algortihms.
