@@ -1,4 +1,4 @@
-# Machine Learning Coursera learning notes
+# Machine Learning learning notes
 
 > Notes to learn Machine Learning from zero to hero using Visual Notes by @carlogilmar. Hope this could be useful for all of you.
 
@@ -11,7 +11,7 @@
 ![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/c60be561-1ae5-4d6e-8168-34babab087f2)
 ![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/bc4f80f4-5fb5-495e-ba23-713fc73d19e9)
 
-** 💡 Insights:**
+**💡 Insights:**
 - **Machine Learning** refers to the computer's ability to learn without being programmed.
 - There are types of ML: **supervised and unsupervised learning, recommender systems, and reinforcement learning.**
 - **Supervised Learning** are algorithms that learning from X inputs to generate Y outputs.
