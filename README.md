@@ -1,6 +1,6 @@
 # Machine Learning Coursera learning notes
 
-| Notes to learn Machine Learning from zero to hero using Visual Notes by @carlogilmar. Hope this could be useful for all of you.
+> Notes to learn Machine Learning from zero to hero using Visual Notes by @carlogilmar. Hope this could be useful for all of you.
 
 |Table of contents|
 |:-------------:|
