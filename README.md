@@ -4,9 +4,9 @@
 
 |Table of contents|
 |:-------------:|
-|[Sketchnote 1: Machine Learning basics](#sketchnote-1)|
+|[S1: Machine Learning Basics](#sketchnote-1)|
 
-# Sketchnote 1
+# Sketchnote 1 Machine Learning Basics
 
 ![](https://github.com/carlogilmar/ml_study_group/assets/17634377/c884a559-d14f-49c2-b0dd-f939afcfa669)
 
