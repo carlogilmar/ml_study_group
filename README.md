@@ -8,7 +8,9 @@
 
 # Sketchnote 1 Machine Learning Basics
 
-![](https://github.com/carlogilmar/ml_study_group/assets/17634377/4ad19a77-e640-4fd9-91f4-400c5c664f83)
+![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/c60be561-1ae5-4d6e-8168-34babab087f2)
+![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/bc4f80f4-5fb5-495e-ba23-713fc73d19e9)
+
 
 Insights:
 1. **Machine Learning** refers to the computer's ability to learn without being programmed.
