@@ -28,7 +28,7 @@
 
 ![](https://github.com/carlogilmar/ml_study_group/assets/17634377/c8fa9546-7948-45a3-a941-5661e2ff2696)
 
-# S2 Cost function formula
+# S3 Cost function formula
 
 ![](https://github.com/carlogilmar/ml_study_group/assets/17634377/7a741bf2-fd4c-4c9a-9865-e8ae99dd156a)
 
