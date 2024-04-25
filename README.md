@@ -32,5 +32,6 @@
 
 ![](https://github.com/carlogilmar/ml_study_group/assets/17634377/7a741bf2-fd4c-4c9a-9865-e8ae99dd156a)
 
+# S4 Cost function params
 
-
+![](https://github.com/carlogilmar/ml_study_group/assets/17634377/1397c48a-9904-48a6-8ec7-7ca3873063ed)
