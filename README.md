@@ -35,3 +35,6 @@
 # S4 Cost function params
 
 ![](https://github.com/carlogilmar/ml_study_group/assets/17634377/1397c48a-9904-48a6-8ec7-7ca3873063ed)
+
+![](https://github.com/carlogilmar/ml_study_group/assets/17634377/728f5a13-d080-44b6-af1d-c3ca6ad168fe)
+
