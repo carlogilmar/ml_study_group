@@ -4,9 +4,10 @@
 
 |Table of contents|
 |:-------------:|
-|[S1: Machine Learning Basics](#sketchnote-1)|
+|[S1: Machine Learning Basics](#s1-machine-learning-basics)|
+|[S2: Supervised Learning - Linear regression](#s2-linear-regression)|
 
-# Sketchnote 1 Machine Learning Basics
+# S1 Machine Learning Basics
 
 ![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/c60be561-1ae5-4d6e-8168-34babab087f2)
 ![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/bc4f80f4-5fb5-495e-ba23-713fc73d19e9)
@@ -19,5 +20,10 @@
   - **Regression** algorithms are for predict a number, there are infinite possible outputs.
   - **Classification** algorithms are for predicts categories.
 - **Unsupervised Learning** works with data that is not associated to an specific output.
- - This algorithms try to find structure in the data.
- - Clustering is one kind of this algortihms.
+  - This algorithms try to **find structure** in the data.
+  - **Clustering** is one kind of this algortihms.
+
+# S2 Linear Regression
+
+![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/c8fa9546-7948-45a3-a941-5661e2ff2696)
+
