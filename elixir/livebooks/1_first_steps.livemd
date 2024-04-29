@@ -1,0 +1,146 @@
+# My First Chambita in LiveViews
+
+```elixir
+Mix.install([
+  {:vega_lite, "~> 0.1.6"},
+  {:kino, "~> 0.8.1"},
+  {:kino_vega_lite, "~> 0.1.7"}
+])
+```
+
+## Exploring a Livebook essentials
+
+| Table of contents                 |
+| --------------------------------- |
+| 1. Display a data table with Kino |
+| 2. Plot your first chart          |
+
+<!-- livebook:{"break_markdown":true} -->
+
+### 1. Display a data table with Kino
+
+```elixir
+data = [
+  %{id: 1, name: "Elixir", website: "https://elixir-lang.org"},
+  %{id: 2, name: "Erlang", website: "https://www.erlang.org"}
+]
+
+Kino.DataTable.new(data, name: "My Table")
+```
+
+```elixir
+data =
+  for pid <- Process.list() do
+    pid |> Process.info() |> Keyword.merge(registered_name: nil)
+  end
+
+Kino.DataTable.new(
+  data,
+  keys: [:registered_name, :initial_call, :reductions, :stack_size],
+  name: "My first table in Elixir"
+)
+```
+
+```elixir
+data =
+  [
+    %{reservations: 13, pizzas: 33},
+    %{reservations: 2, pizzas: 16},
+    %{reservations: 14, pizzas: 32},
+    %{reservations: 23, pizzas: 51},
+    %{reservations: 13, pizzas: 27},
+    %{reservations: 1, pizzas: 16},
+    %{reservations: 18, pizzas: 34},
+    %{reservations: 10, pizzas: 17},
+    %{reservations: 26, pizzas: 29},
+    %{reservations: 3, pizzas: 15},
+    %{reservations: 3, pizzas: 15},
+    %{reservations: 21, pizzas: 32},
+    %{reservations: 7, pizzas: 22},
+    %{reservations: 22, pizzas: 37},
+    %{reservations: 2, pizzas: 13},
+    %{reservations: 27, pizzas: 44},
+    %{reservations: 6, pizzas: 16},
+    %{reservations: 10, pizzas: 21},
+    %{reservations: 18, pizzas: 37},
+    %{reservations: 15, pizzas: 30},
+    %{reservations: 9, pizzas: 26},
+    %{reservations: 26, pizzas: 34},
+    %{reservations: 8, pizzas: 23},
+    %{reservations: 15, pizzas: 39},
+    %{reservations: 10, pizzas: 27},
+    %{reservations: 21, pizzas: 37},
+    %{reservations: 5, pizzas: 17},
+    %{reservations: 6, pizzas: 18},
+    %{reservations: 13, pizzas: 25},
+    %{reservations: 13, pizzas: 23}
+  ]
+```
+
+### 2.  Plot a simple chart
+
+1. Click on `smart` button and select `chart`.
+2. Fill the form and select `x-axis` and `y-axis`.
+
+<!-- livebook:{"attrs":"eyJjaGFydF90aXRsZSI6Ik15IEZpcnN0IENoYXJ0IiwiaGVpZ2h0Ijo0MDAsImxheWVycyI6W3siYWN0aXZlIjp0cnVlLCJjaGFydF90eXBlIjoicG9pbnQiLCJjb2xvcl9maWVsZCI6bnVsbCwiY29sb3JfZmllbGRfYWdncmVnYXRlIjpudWxsLCJjb2xvcl9maWVsZF9iaW4iOm51bGwsImNvbG9yX2ZpZWxkX3NjYWxlX3NjaGVtZSI6bnVsbCwiY29sb3JfZmllbGRfdHlwZSI6bnVsbCwiZGF0YV92YXJpYWJsZSI6ImRhdGEiLCJnZW9kYXRhX2NvbG9yIjoiYmx1ZSIsImxhdGl0dWRlX2ZpZWxkIjpudWxsLCJsb25naXR1ZGVfZmllbGQiOm51bGwsInhfZmllbGQiOiJyZXNlcnZhdGlvbnMiLCJ4X2ZpZWxkX2FnZ3JlZ2F0ZSI6bnVsbCwieF9maWVsZF9iaW4iOm51bGwsInhfZmllbGRfc2NhbGVfdHlwZSI6bnVsbCwieF9maWVsZF90eXBlIjoicXVhbnRpdGF0aXZlIiwieV9maWVsZCI6InBpenphcyIsInlfZmllbGRfYWdncmVnYXRlIjpudWxsLCJ5X2ZpZWxkX2JpbiI6bnVsbCwieV9maWVsZF9zY2FsZV90eXBlIjpudWxsLCJ5X2ZpZWxkX3R5cGUiOiJxdWFudGl0YXRpdmUifV0sInZsX2FsaWFzIjoiRWxpeGlyLlZlZ2FMaXRlIiwid2lkdGgiOjYwMH0","chunks":null,"kind":"Elixir.KinoVegaLite.ChartCell","livebook_object":"smart_cell"} -->
+
+```elixir
+VegaLite.new(width: 600, height: 400, title: "My First Chart")
+|> VegaLite.data_from_values(data, only: ["reservations", "pizzas"])
+|> VegaLite.mark(:point)
+|> VegaLite.encode_field(:x, "reservations", type: :quantitative)
+|> VegaLite.encode_field(:y, "pizzas", type: :quantitative)
+```
+
+### 3. Plot a linear regression or a chart with 2 layers
+
+```elixir
+predictions = [
+  %{x: 0, prediction: 0.0},
+  %{x: 1, prediction: 1.8400000000000014},
+  %{x: 2, prediction: 3.680000000000003},
+  %{x: 3, prediction: 5.520000000000004},
+  %{x: 4, prediction: 7.360000000000006},
+  %{x: 5, prediction: 9.200000000000006},
+  %{x: 6, prediction: 11.040000000000008},
+  %{x: 7, prediction: 12.88000000000001},
+  %{x: 8, prediction: 14.720000000000011},
+  %{x: 9, prediction: 16.560000000000013},
+  %{x: 10, prediction: 18.400000000000013},
+  %{x: 11, prediction: 20.240000000000016},
+  %{x: 12, prediction: 22.080000000000016},
+  %{x: 13, prediction: 23.92000000000002},
+  %{x: 14, prediction: 25.76000000000002},
+  %{x: 15, prediction: 27.600000000000023},
+  %{x: 16, prediction: 29.440000000000023},
+  %{x: 17, prediction: 31.280000000000022},
+  %{x: 18, prediction: 33.120000000000026},
+  %{x: 19, prediction: 34.96000000000003},
+  %{x: 20, prediction: 36.800000000000026},
+  %{x: 21, prediction: 38.64000000000003},
+  %{x: 22, prediction: 40.48000000000003},
+  %{x: 23, prediction: 42.320000000000036},
+  %{x: 24, prediction: 44.16000000000003},
+  %{x: 25, prediction: 46.000000000000036},
+  %{x: 26, prediction: 47.84000000000004},
+  %{x: 27, prediction: 49.680000000000035}
+]
+```
+
+<!-- livebook:{"attrs":"eyJjaGFydF90aXRsZSI6IkxpbmVhciBSZWdyZXNzaW9uIiwiaGVpZ2h0Ijo0MDAsImxheWVycyI6W3siYWN0aXZlIjp0cnVlLCJjaGFydF90eXBlIjoicG9pbnQiLCJjb2xvcl9maWVsZCI6bnVsbCwiY29sb3JfZmllbGRfYWdncmVnYXRlIjpudWxsLCJjb2xvcl9maWVsZF9iaW4iOm51bGwsImNvbG9yX2ZpZWxkX3NjYWxlX3NjaGVtZSI6bnVsbCwiY29sb3JfZmllbGRfdHlwZSI6bnVsbCwiZGF0YV92YXJpYWJsZSI6ImRhdGEiLCJnZW9kYXRhX2NvbG9yIjoiYmx1ZSIsImxhdGl0dWRlX2ZpZWxkIjpudWxsLCJsb25naXR1ZGVfZmllbGQiOm51bGwsInhfZmllbGQiOiJyZXNlcnZhdGlvbnMiLCJ4X2ZpZWxkX2FnZ3JlZ2F0ZSI6bnVsbCwieF9maWVsZF9iaW4iOm51bGwsInhfZmllbGRfc2NhbGVfdHlwZSI6bnVsbCwieF9maWVsZF90eXBlIjoicXVhbnRpdGF0aXZlIiwieV9maWVsZCI6InBpenphcyIsInlfZmllbGRfYWdncmVnYXRlIjpudWxsLCJ5X2ZpZWxkX2JpbiI6bnVsbCwieV9maWVsZF9zY2FsZV90eXBlIjpudWxsLCJ5X2ZpZWxkX3R5cGUiOiJxdWFudGl0YXRpdmUifSx7ImFjdGl2ZSI6dHJ1ZSwiY2hhcnRfdHlwZSI6ImxpbmUiLCJjb2xvcl9maWVsZCI6bnVsbCwiY29sb3JfZmllbGRfYWdncmVnYXRlIjpudWxsLCJjb2xvcl9maWVsZF9iaW4iOm51bGwsImNvbG9yX2ZpZWxkX3NjYWxlX3NjaGVtZSI6bnVsbCwiY29sb3JfZmllbGRfdHlwZSI6bnVsbCwiZGF0YV92YXJpYWJsZSI6InByZWRpY3Rpb25zIiwiZ2VvZGF0YV9jb2xvciI6ImJsdWUiLCJsYXRpdHVkZV9maWVsZCI6bnVsbCwibG9uZ2l0dWRlX2ZpZWxkIjpudWxsLCJ4X2ZpZWxkIjoieCIsInhfZmllbGRfYWdncmVnYXRlIjpudWxsLCJ4X2ZpZWxkX2JpbiI6bnVsbCwieF9maWVsZF9zY2FsZV90eXBlIjpudWxsLCJ4X2ZpZWxkX3R5cGUiOiJxdWFudGl0YXRpdmUiLCJ5X2ZpZWxkIjoicHJlZGljdGlvbiIsInlfZmllbGRfYWdncmVnYXRlIjpudWxsLCJ5X2ZpZWxkX2JpbiI6bnVsbCwieV9maWVsZF9zY2FsZV90eXBlIjpudWxsLCJ5X2ZpZWxkX3R5cGUiOiJxdWFudGl0YXRpdmUifV0sInZsX2FsaWFzIjoiRWxpeGlyLlZlZ2FMaXRlIiwid2lkdGgiOjYwMH0","chunks":null,"kind":"Elixir.KinoVegaLite.ChartCell","livebook_object":"smart_cell"} -->
+
+```elixir
+VegaLite.new(width: 600, height: 400, title: "Linear Regression")
+|> VegaLite.layers([
+  VegaLite.new()
+  |> VegaLite.data_from_values(data, only: ["reservations", "pizzas"])
+  |> VegaLite.mark(:point)
+  |> VegaLite.encode_field(:x, "reservations", type: :quantitative)
+  |> VegaLite.encode_field(:y, "pizzas", type: :quantitative),
+  VegaLite.new()
+  |> VegaLite.data_from_values(predictions, only: ["x", "prediction"])
+  |> VegaLite.mark(:line)
+  |> VegaLite.encode_field(:x, "x", type: :quantitative)
+  |> VegaLite.encode_field(:y, "prediction", type: :quantitative)
+])
+```
