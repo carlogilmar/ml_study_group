@@ -45,3 +45,6 @@
 
 ![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/10273690-1aee-4b88-bded-bd49d55e61cf)
 
+![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/79403d43-914a-462c-aaab-8977ed9d6cf1)
+
+
