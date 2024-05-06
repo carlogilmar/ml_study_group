@@ -4,9 +4,12 @@
 
 |Table of contents|
 |:-------------:|
+| `Supervised Learning - Week 1` |
 |[S1: Machine Learning Basics](#s1-machine-learning-basics)|
-|[S2: Supervised Learning - Linear regression](#s2-linear-regression)|
-|[S3: Supervised Learning - Cost function formula](#s3-cost-function-formula)|
+|[S2: Linear regression](#s2-linear-regression)|
+|[S3: Cost function formula](#s3-cost-function-formula)|
+|[S4: Cost function params](#s4-cost-function-params)|
+|[S5: Gradient Descent](#s5-gradient-descent)|
 
 # S1 Machine Learning Basics
 
@@ -37,4 +40,8 @@
 ![](https://github.com/carlogilmar/ml_study_group/assets/17634377/1397c48a-9904-48a6-8ec7-7ca3873063ed)
 
 ![](https://github.com/carlogilmar/ml_study_group/assets/17634377/728f5a13-d080-44b6-af1d-c3ca6ad168fe)
+
+# S5 Gradient Descent
+
+![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/10273690-1aee-4b88-bded-bd49d55e61cf)
 
