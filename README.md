@@ -11,6 +11,22 @@
 |[S4: Cost function params](#s4-cost-function-params)|
 |[S5: Gradient Descent](#s5-gradient-descent)|
 
+**Summarize of concepts**
+
+1. Machine Learning
+  - What it is?
+  - Types of ML
+    - Supervised Learning
+    - Unsupervised Learning
+
+2. Supervised Learning: Linear Regression
+  - Linear regression model (inputs that predict outputs)
+  - Linear regression function model with one variable
+  - Cost function: Evaluate the error in your model
+  - Gradient Descent: Minimize the cost function 
+
+  
+
 # S1 Machine Learning Basics
 
 ![Ilustración_sin_título](https://github.com/carlogilmar/ml_study_group/assets/17634377/c60be561-1ae5-4d6e-8168-34babab087f2)
