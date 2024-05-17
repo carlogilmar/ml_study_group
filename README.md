@@ -18,7 +18,6 @@
   - Types of ML
     - Supervised Learning
     - Unsupervised Learning
-
 2. Supervised Learning: Linear Regression
   - Linear regression model (inputs that predict outputs)
   - Linear regression function model with one variable
