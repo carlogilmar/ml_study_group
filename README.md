@@ -32,13 +32,7 @@ ML Summary Topics
     - Aleatoric Uncertainty: lack of knowledge in the data. 
     - Capturing Uncertainty data using a probability distribution.
   - Maximum likehood estimation
-3. Regression Models `Supervised Learning`
-  - Concept: Relationship between targets X and features Y for prediction. 
-  - Common choise for loss function is quadratic loss.
-
-
-
-  
+3. Multiple Variables and Vectorization
 
 # S1 Machine Learning Basics
 
