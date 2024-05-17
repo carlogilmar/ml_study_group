@@ -13,16 +13,30 @@
 
 **Summarize of concepts**
 
+ML Summary Topics
+
 1. Machine Learning
   - What it is?
   - Types of ML
     - Supervised Learning
+      - Linear Regression
+      - Regression Models
     - Unsupervised Learning
-2. Supervised Learning: Linear Regression
-  - Linear regression model (inputs that predict outputs)
+2. Linear Regression `Supervised Learning`
+  - Model: inputs (features) X that predict Y outputs(targets) using a training set.
   - Linear regression function model with one variable
-  - Cost function: Evaluate the error in your model
-  - Gradient Descent: Minimize the cost function 
+  - Cost function: Evaluate the error in your model.
+  - Gradient Descent (average loss of the features): Minimize the cost function.
+  - Uncertainty
+    - Epistemic Uncertainty: lack of knowledge in the model.
+    - Aleatoric Uncertainty: lack of knowledge in the data. 
+    - Capturing Uncertainty data using a probability distribution.
+  - Maximum likehood estimation
+3. Regression Models `Supervised Learning`
+  - Concept: Relationship between targets X and features Y for prediction. 
+  - Common choise for loss function is quadratic loss.
+
+
 
   
 
