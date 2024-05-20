@@ -77,8 +77,9 @@ where:
 1. Feature scaling to normalize data (Subtracting the mean and dividing by the standard deviation).
 2. Initialize parameters `w, b, learning rate and iterations`
 3. Train the model iterating 1000 times (this means get the gradient descent)
-4. With this you'll calculate the params w and b for your linear regression model.
+4. With this you'll calculate the params `w` and `b` for your linear regression model to predict `Y` based on `X`: `Y = w * X + b`
 
+ 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
