@@ -4,7 +4,7 @@
 
 # Week 2
 
-### Multiple features
+### 1. Multiple features
 
 ![image](https://github.com/carlogilmar/ml_study_group/assets/17634377/8e618a84-10c0-4890-a4ef-a32cc6a5cf51)
 
@@ -31,3 +31,12 @@ Gradient Descent
 ```
 
 <img width="925" alt="image" src="https://github.com/carlogilmar/ml_study_group/assets/17634377/3d08400b-f342-4683-80b3-a64010561655">
+
+### 2. Gradient Descent in practice
+
+Tips:
+1. Feature scaling
+
+**Feature Scaling**
+
+<img width="929" alt="image" src="https://github.com/carlogilmar/ml_study_group/assets/17634377/3dc64216-970f-4bff-b397-7e3b49a859f6">
