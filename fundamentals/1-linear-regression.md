@@ -62,7 +62,7 @@ where:
 - **Cost Function**: Measures the error in predictions, commonly using Mean Squared Error (MSE).
 - **Gradient Descent**: An optimization technique to find the best \( w \) and \( b \) by iteratively reducing the cost function.
 
-## 4. Example
+## 4. Example of Linear Regression
 
 `Dataset`
 |Sizes|Prices|
@@ -143,4 +143,82 @@ print(f"w: {w}, b: {b}")
 
 <img width="737" alt="image" src="https://github.com/carlogilmar/ml_study_group/assets/17634377/641a5272-b307-4583-ae09-881489a78952">
 
+## 5. Linear regression with multiple variables
 
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate synthetic data for demonstration
+np.random.seed(0)
+num_samples = 100
+sizes = np.random.randint(1000, 3000, num_samples)  # Size of houses (in sq ft)
+bedrooms = np.random.randint(2, 6, num_samples)     # Number of bedrooms
+bathrooms = np.random.randint(1, 4, num_samples)    # Number of bathrooms
+
+# Generate house prices using a linear combination of features with noise
+# True parameters: price = 100 * size + 5000 * bedrooms + 10000 * bathrooms + noise
+prices = 100 * sizes + 5000 * bedrooms + 10000 * bathrooms + np.random.normal(0, 20000, num_samples)
+
+# Normalize the features
+sizes_normalized = (sizes - np.mean(sizes)) / np.std(sizes)
+bedrooms_normalized = (bedrooms - np.mean(bedrooms)) / np.std(bedrooms)
+bathrooms_normalized = (bathrooms - np.mean(bathrooms)) / np.std(bathrooms)
+
+# Combine features into a feature matrix X
+X = np.column_stack((sizes_normalized, bedrooms_normalized, bathrooms_normalized))
+
+# Initialize parameters
+n_features = 3
+w = np.zeros((n_features, 1))  # Initialize weights as zeros
+b = 0
+alpha = 0.01  # Learning rate
+num_iterations = 1000
+
+# Gradient descent
+cost_history = []
+for i in range(num_iterations):
+    # Compute gradients
+    dw = (1 / num_samples) * np.dot(X.T, (np.dot(X, w) + b - prices.reshape(-1, 1)))
+    db = (1 / num_samples) * np.sum(np.dot(X, w) + b - prices.reshape(-1, 1))
+
+    # Update parameters
+    w -= alpha * dw
+    b -= alpha * db
+
+    # Compute and store the cost
+    cost = (1 / (2 * num_samples)) * np.sum((np.dot(X, w) + b - prices.reshape(-1, 1)) ** 2)
+    cost_history.append(cost)
+
+    # Print the cost every 100 iterations
+    if i % 100 == 0:
+        print(f"Iteration {i}: Cost {cost}")
+
+# Plot cost history to visualize convergence
+plt.plot(range(num_iterations), cost_history)
+plt.xlabel('Iteration')
+plt.ylabel('Cost')
+plt.title('Cost Reduction Over Time')
+plt.show()
+
+# Print the final parameters
+print("Final parameters:")
+print("w:", w.flatten())
+print("b:", b)
+
+# Predict house prices for new data
+def predict(size, num_bedrooms, num_bathrooms):
+    size_normalized = (size - np.mean(sizes)) / np.std(sizes)
+    num_bedrooms_normalized = (num_bedrooms - np.mean(bedrooms)) / np.std(bedrooms)
+    num_bathrooms_normalized = (num_bathrooms - np.mean(bathrooms)) / np.std(bathrooms)
+    X_new = np.array([[size_normalized, num_bedrooms_normalized, num_bathrooms_normalized]])
+    Y_pred = np.dot(X_new, w) + b
+    return Y_pred[0][0]
+
+# Example prediction
+new_size = 2000
+new_bedrooms = 3
+new_bathrooms = 2
+predicted_price = predict(new_size, new_bedrooms, new_bathrooms)
+print(f"Predicted price for a house with {new_size} sq ft, {new_bedrooms} bedrooms, and {new_bathrooms} bathrooms: ${predicted_price:.2f}")
+```
