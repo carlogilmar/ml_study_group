@@ -1,3 +1,5 @@
+![image](https://github.com/carlogilmar/ml_study_group/assets/17634377/d8912dd9-f831-4d36-8431-1139185e4e0d)
+
 # Machine Learning learning notes
 
 > Notes to learn Machine Learning from zero to hero using Visual Notes by @carlogilmar. Hope this could be useful for all of you.
