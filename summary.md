@@ -21,3 +21,27 @@
    - Gradient Descent
    - Overfitting
 
+## Programming Machine Learning Book
+
+1. From zero to image recognition
+   - ML introduction
+   - Linear Regression
+   - GRadient Descent
+   - Matrix Math and dimensions
+   - Classification
+   - Perceptron
+2. Neural Networks
+   - Neutral network from perceptron
+   - Building a network
+   - Training the network
+   - Classifiers
+   - Batches
+   - Testing
+3. Deep Learning
+   - Nural Networks
+   - Overfitting
+   - Activation Functions
+   - Vanilla Networks
+   - Deep learning
+
+
