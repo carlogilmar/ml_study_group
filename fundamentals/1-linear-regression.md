@@ -23,6 +23,9 @@ where:
 > This formula represents a `straight line`, making linear regression suitable for data that has a linear relationship between the input features and the target variable.
 ---
 
+![image](https://github.com/carlogilmar/ml_study_group/assets/17634377/a4d5b817-2c7c-4342-ae07-9db3414b9d8e)
+
+
 ## 2. Cost Function in Linear Regression
 
 ```math
