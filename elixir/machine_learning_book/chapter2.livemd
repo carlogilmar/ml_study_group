@@ -1,0 +1,71 @@
+# Chapter 2
+
+```elixir
+Mix.install([
+  {:nx, "~> 0.5"},
+  {:exla, "~> 0.5"},
+  {:benchee, github: "bencheeorg/benchee", override: true}
+])
+```
+
+## Section
+
+```elixir
+tensor = Nx.tensor([1, 2, 3])
+
+a = Nx.tensor([1, 2, 3])
+b = Nx.tensor([1.0, 2.0, 3.0])
+dbg(a)
+dbg(b)
+```
+
+```elixir
+Nx.tensor(1.0e-45, type: {:f, 64})
+```
+
+```elixir
+c = Nx.tensor([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+```
+
+```elixir
+tensor = Nx.tensor([1, 2])
+
+tensor |> Nx.reshape({1, 2, 1})
+```
+
+```elixir
+defmodule MyModule do
+  import Nx.Defn
+
+  defn adds_one(x) do
+    Nx.add(x, Nx.tensor([2, 2, 2])) |> print_expr()
+  end
+end
+```
+
+```elixir
+MyModule.adds_one(Nx.tensor([1, 2, 3]))
+```
+
+```elixir
+defmodule Softmax do
+  import Nx.Defn
+
+  defn(softmax(n), do: Nx.exp(n) / Nx.sum(Nx.exp(n)))
+end
+```
+
+```elixir
+key = Nx.Random.key(42)
+{tensor, _key} = Nx.Random.uniform(key, shape: {1_000_000})
+
+Benchee.run(
+  %{
+    "JIT with EXLA" => fn -> apply(EXLA.jit(&Softmax.softmax/1), [tensor]) end,
+    "Regular Elixir" => fn ->
+      Softmax.softmax(tensor)
+    end
+  },
+  time: 10
+)
+```
